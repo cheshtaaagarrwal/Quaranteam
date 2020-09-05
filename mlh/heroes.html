@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registered Users</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+    <link rel="stylesheet" type="text/css" href="../index.css">
+    <link rel="stylesheet" type="text/css" href="heroes.css">
+    
+    <style>
+      body{
+        background-color: #f1e2e2;
+      }
+    </style>
+</head>
+<body>
+  <nav class="navigation navbar fixed-top navbar-expand-lg navbar-light   justify-content-between">
+      
+    <img  data-toggle="collapse" class="logo" src="../images/virus.svg" width="240" height="110" alt="logo">
+    <button class="navbar-toggler" style="border: none;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+     
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav justify-content-end ml-auto ">
+            <li class="nav-item ">
+                <a class="nav-link black nav-link-fade-up" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link black nav-link-fade-up" href="/about">About us</a>
+            </li>
+            <li class="nav-item black ">
+              <a class="nav-link black nav-link-fade-up" href="/contact">Covid Stats</a>
+          </li>
+           
+     
+            <li class="nav-item dropdown black nav-link-fade-up">
+              <a class="nav-link dropdown-toggle black" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Our Heroes
+              </a>
+      
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Registered Heroes</a>
+                <a class="dropdown-item" href="#">Register for becoming a hero</a>
+                
+                
+              </div>
+            </li> 
+               
+                <!-- <li class="nav-item black ">
+                    <a class="nav-link black nav-link-fade-up" href="#">Order Online</a>
+                </li> -->
+
+               
+          <li class="nav-item dropdown black nav-link-fade-up">
+    <a class="nav-link dropdown-toggle black" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Manage Isolation
+    </a>
+
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" href="#">Things to do</a>
+      <a class="dropdown-item" href="#">Games</a>
+      <a class="dropdown-item" href="#">Blog</a>
+      
+      
+    </div>
+  </li> 
+  <li class="nav-item blog">
+    <a class="nav-link black nav-link-fade-up" href="#">Volunteer</a>
+</li>
+
+          
+        </ul>
+
+            
+    </div>
+</nav>
+   <div class="jumbotron jumbotron-fluid" style="margin-top: -20px;">
+  <div class="container">
+    <h1 class="display-4 salute"><strong>Salute to the heroes</strong></h1>
+    <p class="lead salute" >Thank you from the bottom of our heart for serving on the frontline of this pandemic</p>
+  </div>
+</div>
+<div class="container">
+	<section id="heroes">
+		
+	</section>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</body>
+</html>
