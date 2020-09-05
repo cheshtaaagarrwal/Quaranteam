@@ -136,3 +136,49 @@ firebase.auth().onAuthStateChanged(function(user){
   document.querySelector('#log').style.display='none';
   }
 })
+
+var rootRef=firebase.database().ref().child("blogs");
+   
+  rootRef.on("child_added",childSnap=>{
+    // alert("hi");
+    // snap.forEach(childSnap=>{
+      var title=childSnap.child("title").val();
+      var post=childSnap.child("post").val();
+      
+      $("#blog2").append(
+        "<div class='col-md-4 mt-10' style='display:inline-block; margin-bottom:20px;'><div class='card shadow' style='height:300px; border-radius:20px;' ><div class='card-body'>"
+         +"<h5 style='text-align:center;text-transform:uppercase;'>"+title+
+             "</h5>"+"<p style='top:50%;'>"+post.substring(0,200)+"</p>"+"<button onclick=display('"+childSnap.key+"') class='btn btn-primary'style='margin-bottom:30px;position: absolute; bottom:   5px;'>Read More"+"</button>"+"</div></div></div>");
+ 
+   });
+   function display(key){
+    
+     firebase.database().ref('blogs/' + key).on('value', snapshot => {
+            var title=snapshot.val().title;
+            var post=snapshot.val().post;
+            let product={
+            
+              title:title,
+              post:post,
+             
+             
+            }
+            
+            localStorage.setItem("post", JSON.stringify(product));
+           
+      });
+      window.location.href="./post.html";
+     
+   }
+
+let post2=localStorage.getItem("post");
+post=JSON.parse(post2);
+console.log(post2);
+let postcontainer=document.querySelector('.well');
+postcontainer.innerHTML='';
+postcontainer.innerHTML+=` <h3>${post.title}</h3>
+
+
+<hr>
+<p>${post.post}</p>
+`
