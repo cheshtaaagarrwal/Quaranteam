@@ -80,51 +80,50 @@ else{
 });
 
 
-  $("#requirementBtn").click(function (){
- var name = document.getElementById('nameHelp').value;
-var email = document.getElementById('emailHelp').value;
+  $("#submitBtn").click(function (){
+ var name = document.getElementById('nameEvent').value;
+var email = document.getElementById('emailEvent').value;
 var contact = document.getElementById('contactNumber').value;
-var problem = document.getElementById('problem').value;
-var requirements = document.getElementById('requirements').value;
+var description = document.getElementById('description').value;
+var other = document.getElementById('other').value;
+var eventname = document.getElementById('Eventname').value;
   firebase.auth().onAuthStateChanged(function(user){
      
       if(!user){
         alert("pls login");
       }
          else{
-      if(name!=""&& email!="" &&contact!="" && problem!="" && requirements!=""){
+      if(name!=""&& email!="" &&contact!="" && description!="" && other!=""){
           alert("Posted");
              var user = firebase.auth().currentUser;
             var useremail=user.email;
-            var posts=firebase.database().ref().child("post");
-            var newPost=posts.push();
-            firebase.database().ref('posts/'+newPost.key).set({
+            var events=firebase.database().ref().child("events");
+            var newEvent=events.push();
+            firebase.database().ref('events/'+newEvent.key).set({
                 name:name,
                 email:email,
                 contact:contact,
-                problem:problem,
-                requirements:requirements
+                description:description,
+                other:other,
+                eventname:eventname
               });
-            alert(user);
-
+           
             firebase.database().ref('users/' ).once("value",function(snapshot){
        
           snapshot.forEach(function(childsnap){
                 
                if(useremail==childsnap.val().username){
-                    alert("user")
-                   var requirement=firebase.database().ref('users/'+childsnap.key).child("requirement");
-                
-               
-            var newRequire=requirement.push();
-            firebase.database().ref('users/'+childsnap.key+'/requirement/'+newRequire.key).set({
-                 name:name,
-                email:email,
-                  contact:contact,
-                  problem:problem,
-                 requirements:requirements,
-                // requirements:requirements   
-              });
+
+                   var eve=firebase.database().ref('users/'+childsnap.key).child("events");
+                   var newEve=eve.push();
+                   alert(newEve.key);
+                firebase.database().ref('users/'+childsnap.key+'/events/'+newEve.key).update({
+                    description:description,
+                    other:other,
+                    email:email,
+                    contact:contact,
+                    eventname:eventname
+                });
                }
 
           })
@@ -145,57 +144,71 @@ firebase.auth().onAuthStateChanged(function(user){
   }
 })
 
-var postRef=firebase.database().ref().child("posts");
+var eventtRef=firebase.database().ref().child("events");
    
-  postRef.on("child_added",childSnap=>{
+  eventtRef.on("child_added",childSnap=>{
     // alert("hi");
     // snap.forEach(childSnap=>{
       var name=childSnap.child("name").val();
       var email=childSnap.child("email").val();
       var contact=childSnap.child("contact").val();
-      var problem=childSnap.child("problem").val();
-      var requirements=childSnap.child("requirements").val();
-      $("#blog2").append(
+      var description=childSnap.child("description").val();
+      var other=childSnap.child("other").val();
+       var eventname=childSnap.child("eventname").val();
+alert(description);
+      // $("#blog2").append(
+      //   "<div class='col-md-4 mt-10' style='display:inline-block; margin-bottom:20px;'><div class='card shadow' style='height:400px; border-radius:20px;' ><div class='card-body'>"
+      //    +"<h5 style='text-align:center;text-transform:uppercase;'>"+eventname+
+      //        "</h5>"+"<p class='card-text' style='inline-block' >Organiser: "+name+"</p>"+"<p class='card-text' style='inline-block' >Phone: "+contact+"</p>"+"<p class='card-text' style='inline-block' >Email: "+email+"</p>"+"<p style='top:50%;'>Problem: <br>"+description.substring(0,70)+"</p>"+"<p style='top:50%;'>Requirements/Solution: <br>"+other.substring(0,50)+"</p>"+"<button class='btn btn-primary'style='margin-bottom:30px;position: absolute; bottom:   5px;'>Read More"+"</button>"+"</div></div></div>");
+ $("#eventdisplay").append(
         "<div class='col-md-4 mt-10' style='display:inline-block; margin-bottom:20px;'><div class='card shadow' style='height:400px; border-radius:20px;' ><div class='card-body'>"
-         +"<h5 style='text-align:center;text-transform:uppercase;'>"+name+
-             "</h5>"+"<p class='card-text' style='inline-block' >Phone: "+contact+"</p>"+"<p class='card-text' style='inline-block' >Email: "+email+"</p>"+"<p style='top:50%;'>Problem: <br>"+problem.substring(0,70)+"</p>"+"<p style='top:50%;'>Requirements/Solution: <br>"+requirements.substring(0,50)+"</p>"+"<button onclick=display('"+childSnap.key+"')  class='btn btn-primary'style='margin-bottom:30px;position: absolute; bottom:   5px;'>Read More"+"</button>"+"</div></div></div>");
- 
+         +"<h5 style='text-align:center;text-transform:uppercase;'>"+eventname+
+             "</h5>"+"<p style='top:50%;'>Organiser: "+name+"</p>"+"<p style='top:50%;'>Email:"+email+"</p>"+"<p style='top:50%;'>Contact:"+contact+"</p>"+"<p style='top:50%;'>"+description.substring(0,70)+"</p>"+"<p style='top:50%;'>"+other.substring(0,50)+"</p>"+"<button onclick=display('"+childSnap.key+"') class='btn btn-primary'style='margin-bottom:30px;position: absolute; bottom:   5px;'>Read More"+"</button>"+"</div></div></div>");
    });
 
- function display(key){
+
+  function display(key){
     
-     firebase.database().ref('posts/' + key).on('value', snapshot => {
+     firebase.database().ref('events/' + key).on('value', snapshot => {
             var name=snapshot.val().name;
             var email=snapshot.val().email;
-            var problem=snapshot.val().problem;
             var contact=snapshot.val().contact;
-            var requirements=snapshot.val().requirements;
-            let requirement={
-             name:name,
-             email:email,
-             problem:problem,
-             contact:contact,
-             requirements:requirements,
+var description=snapshot.val().name;
+var other=snapshot.val().other;
+var eventname=snapshot.val().eventname;
+
+            let event={
+            
+              name:name,
+              email:email,
+              contact:contact,
+              description:description,
+              other:other,
+              eventname:eventname,
              key:key,
+             
             }
             
-            localStorage.setItem("query", JSON.stringify(requirement));
+            localStorage.setItem("event", JSON.stringify(event));
+           
       });
-      window.location.href="./readMore.html";
+      window.location.href="./Read.html";
      
    }
 
-let post2=localStorage.getItem("query");
+
+let post2=localStorage.getItem("event");
 post=JSON.parse(post2);
 console.log(post2);
 let postcontainer=document.querySelector('.well');
 postcontainer.innerHTML='';
-postcontainer.innerHTML+=` <h3>${post.name}</h3>
+postcontainer.innerHTML+=` <h3>${post.eventname}</h3>
 
 
 <hr>
-<p>Contact: ${post.contact}</p>
+<p>Oragniser: ${post.name}</p>
 <p>Email: ${post.email}</p>
-<p>Problem: ${post.problem}</p>
-<p>Requirements / Solution :${post.requirements}</p>
+<p>Contact: ${post.contact}</p>
+<p>description: ${post.description}</p>
+<p>Other: ${post.other}</p><hr><hr>
 `
