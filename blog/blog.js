@@ -160,7 +160,7 @@ var rootRef=firebase.database().ref().child("blogs");
             
               title:title,
               post:post,
-             
+             key:key,
              
             }
             

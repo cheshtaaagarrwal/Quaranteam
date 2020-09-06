@@ -99,30 +99,38 @@
         </div>
     </nav>
     <div class="container">
+
     <div class="row">
         <div class="col-md-12">
           <div class="well blog-post">
       
-  </div>
+        </div>
           <br><br>
-          <h2>Comments</h2>
+          <h2>Add a comment</h2>
           <form>
              <div class="form-group">
               <label>Name</label>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" id="name">
             </div>
             <div class="form-group">
               <label>Email address</label>
-              <input type="email" class="form-control">
+              <input type="email" class="form-control" id="email">
             </div>
              <div class="form-group">
               <label>Body</label>
-              <textarea class="form-control"></textarea>
+              <textarea class="form-control" id="comment"></textarea>
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <a id="submitComment">Submit</a>
           </form>
+          <div>
+            <h2>Comments</h2>
+            <section id="commentSection">
+              
+            </section>
+          </div>
   
         </div>
+
     </div>
 
 
@@ -208,6 +216,7 @@
   AOS.init();
 </script>
 <script src="blog.js"></script>
+<script src="post.js"></script>
 </body>
 
 </html>
