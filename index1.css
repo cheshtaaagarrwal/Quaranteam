@@ -1,0 +1,44 @@
+.banner-image{
+    padding-bottom: 50px;
+    padding-top: 75px;
+    text-align: center;
+    color: #f8f8f8; 
+    background: url(https://lithub.com/wp-content/uploads/2016/04/may-book-preview.png) no-repeat center center;
+    background-size: cover;
+}
+
+.banner-content {
+    position: relative;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    margin-top: 12%;
+    margin-bottom: 12%;
+    background-color: rgba(0,0,0,0.7);
+    max-width: 660px;
+}
+
+.logo{
+   float: left;
+   height: 50px;
+   padding: 15px;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.header-link{
+    float:right; 
+    font-size:14px;
+    height:50px;
+    padding:15px 15px;
+    font-size:16px;
+    font-weight: bold;
+}
+.thumbnail{
+     position: relative;
+     width: 300px;     
+     height: 600px;
+     overflow: hidden;
+}
+.caption{
+    height: 100%
+}
