@@ -92,7 +92,7 @@ var post = document.getElementById('post').value;
     else{
       if(post!=""&& title!=""){
           alert("published");
-            console.log("bnj");
+            
              var user = firebase.auth().currentUser;
              console.log(user);
             var useremail=user.email;
@@ -131,7 +131,7 @@ var post = document.getElementById('post').value;
 
 firebase.auth().onAuthStateChanged(function(user){
   if(user){
-    alert("logged in");
+  
  document.querySelector('#btn-logout').style.display='block';
   document.querySelector('#log').style.display='none';
   }

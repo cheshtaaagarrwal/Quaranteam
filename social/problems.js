@@ -105,14 +105,14 @@ var requirements = document.getElementById('requirements').value;
                 problem:problem,
                 requirements:requirements
               });
-            alert(user);
+          
 
             firebase.database().ref('users/' ).once("value",function(snapshot){
        
           snapshot.forEach(function(childsnap){
                 
                if(useremail==childsnap.val().username){
-                    alert("user")
+                   
                    var requirement=firebase.database().ref('users/'+childsnap.key).child("requirement");
                 
                

@@ -91,7 +91,18 @@
           
         </div>
       </li> 
-
+      <li class="nav-item dropdown black nav-link-fade-up">
+        <a class="nav-link dropdown-toggle black" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       Events
+        </a>
+    
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="./events/eventDisplay.html">Events</a>
+          <a class="dropdown-item" href="./events/events.html">Register a event</a>
+          
+          
+        </div>
+      </li> 
               
             </ul>
     
@@ -230,48 +241,48 @@
     <div class="container">
       <div class="row mb-5 no-gutters">
         <div class="col-sm-6 col-md-6 col-lg-6" data-aos="fade" data-aos-delay="100">
-          <a href="index1.html" class="work-thumb">
+          <a href="#" class="work-thumb">
             <div class="work-text">
               <h2>Doctors, Nurses, Pharmacists and Medical Staff</h2>
               <p>I stopped praying to God the day I realised that it is actually
                 the doctors saving our lives.</p>
-                <h2>Click Here</h2>
+               
             </div>
             <img src="images/doc1.png" alt="Image" class="img-fluid">
           </a>
         </div>
 
         <div class="col-sm-6 col-md-6 col-lg-6" data-aos="fade" data-aos-delay="200">
-          <a href="index2.html" class="work-thumb">
+          <a href="#" class="work-thumb">
             <div class="work-text">
               <h2>Policeman, Security Guards and Epidemic Relief Force</h2>
               <p>Thank you to the security officers who are showing up, who in spite
                 of the risks and fears involved, are not giving up.</p>
-                <h2>Click Here</h2>
+               
             </div>
             <img src="images/pol1.png" alt="Image" class="img-fluid">
           </a>
         </div>
 
         <div class="col-sm-6 col-md-6 col-lg-6" data-aos="fade" data-aos-delay="300">
-          <a href="index3.html" class="work-thumb">
+          <a href="#" class="work-thumb">
             <div class="work-text">
               <h2>Civil Service Officers, District Administration, Ministers and Government Officials</h2>
               <p>World need leaders like these, who prepare strategies and make the
               work done.</p>
-              <h2>Click Here</h2>
+              
             </div>
             <img src="images/gov1.png" alt="Image" class="img-fluid">
           </a>
         </div>
 
         <div class="col-sm-6 col-md-6 col-lg-6" data-aos="fade" data-aos-delay="400">
-          <a href="index4.html" class="work-thumb">
+          <a href="#" class="work-thumb">
             <div class="work-text">
               <h2>Social Workers, farmers, Shop-owners and people in epidemic Management</h2>
               <p>Those who get out of their protective shelters to provide us with
               vegetables and groceries.</p>
-              <h2>Click Here</h2>
+            
             </div>
             <img src="images/soc1.png" alt="Image" class="img-fluid">
           </a>
@@ -494,9 +505,9 @@
   if(user)
   {
     var user = firebase.auth().currentUser;
-    alert("log in successful");
+    
 
-    alert(user);
+   
     console.log(user.email);
     document.querySelector('#log').style.display='none';
      document.querySelector('#btn-logout').style.display='block';

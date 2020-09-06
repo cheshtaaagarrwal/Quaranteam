@@ -116,7 +116,7 @@ var eventname = document.getElementById('Eventname').value;
 
                    var eve=firebase.database().ref('users/'+childsnap.key).child("events");
                    var newEve=eve.push();
-                   alert(newEve.key);
+                  
                 firebase.database().ref('users/'+childsnap.key+'/events/'+newEve.key).update({
                     description:description,
                     other:other,
@@ -155,7 +155,7 @@ var eventtRef=firebase.database().ref().child("events");
       var description=childSnap.child("description").val();
       var other=childSnap.child("other").val();
        var eventname=childSnap.child("eventname").val();
-alert(description);
+
       // $("#blog2").append(
       //   "<div class='col-md-4 mt-10' style='display:inline-block; margin-bottom:20px;'><div class='card shadow' style='height:400px; border-radius:20px;' ><div class='card-body'>"
       //    +"<h5 style='text-align:center;text-transform:uppercase;'>"+eventname+

@@ -48,7 +48,7 @@ var key=post3.key;
 
       });
                   
-     alert(key);
+     
          var com=firebase.database().ref('blogs/'+key).child("comment");
          var newCom=com.push();
          
