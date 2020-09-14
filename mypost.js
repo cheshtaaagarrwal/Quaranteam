@@ -13,7 +13,7 @@ var firebaseConfig = {
 
 
    
-
+var rkey;
     firebase.auth().onAuthStateChanged(function(user){
     if(!user)
     {
@@ -29,7 +29,7 @@ var firebaseConfig = {
             var comment=childSnap.child("username").val();
                 var name=childSnap.child("name").val();
              if(useremail==childSnap.val().username){
-                
+                rkey=childSnap.key;
                 $("#mypost").append("<div><strong>Name: </strong> "+name+"<div><strong>Email: </strong>"+comment+"</div>"+"</div><hr>")
                  var rootRef=firebase.database().ref('users/'+childSnap.key).child('post');
                 
@@ -52,7 +52,39 @@ var firebaseConfig = {
         }
     })
       
+    function display(key){
+    
+      firebase.database().ref('users/' + rkey+'/post/'+key).on('value', snapshot => {
+             var title=snapshot.val().title;
+             var post=snapshot.val().post;
+             let product={
+             
+               title:title,
+               post:post,
+              key:key,
+              
+             }
+             
+             localStorage.setItem("mypost", JSON.stringify(product));
+            
+       });
+       window.location.href="./myreadpost.html";
+      
+    }
+ 
+ let post2=localStorage.getItem("mypost");
+ post=JSON.parse(post2);
+ console.log(post2);
+ let postcontainer=document.querySelector('.well');
+ postcontainer.innerHTML='';
+ postcontainer.innerHTML+=` <h3>${post.title}</h3>
+ 
+ 
+ <hr>
+ <p>${post.post}</p>
+ `
    
+ 
    
 
 

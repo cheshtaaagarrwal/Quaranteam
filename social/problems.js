@@ -15,6 +15,8 @@ var firebaseConfig = {
   alert("logged out");
   document.querySelector('#btn-logout').style.display='none';
   document.querySelector('#log').style.display='block';
+  
+  document.querySelector('#account').style.display='none';
   firebase.auth().signOut();
 });
 
@@ -142,6 +144,8 @@ firebase.auth().onAuthStateChanged(function(user){
     
  document.querySelector('#btn-logout').style.display='block';
   document.querySelector('#log').style.display='none';
+  
+  document.querySelector('#account').style.display='block';
   }
 })
 
