@@ -17,6 +17,60 @@
        <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"/>
         -->
        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+       <style type="text/css">
+        
+         .card-block .btn-outline-primary {
+  width: 100%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+
+.card {
+  margin: 20px 0;
+}
+
+/* Flip Cards CSS */
+.card-container {
+  perspective: 700px;
+}
+.card-flip {
+  position: relative;
+  width: 100%;
+  transform-style: preserve-3d;
+  height: auto;
+  transition: all 0.5s ease-out;
+  background: white;
+  border: none;
+}
+
+.card-flip div {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+.card-flip .front {
+  position: relative;
+  z-index: 1;
+}
+
+.card-flip .back {
+  position: relative;
+  z-index: 0;
+  transform: rotateY(-180deg);
+}
+
+.card-container:hover .card-flip {
+  transform: rotateY(180deg);
+}
+       </style>
+
+
        <style>
          body{
            background-color: #f1e2e2;
@@ -114,7 +168,7 @@
     <div class="container">
       <div class="row slider-text align-items-center justify-content-center">
         <div class="col-lg-12 text-center col-sm-12">
-          <h1 class="mb-4" data-aos="fade-up" data-aos-delay="100">Salute to the Frontline Warriors of this Pandemic</h1>
+          <h1 class="mb-4" data-aos="fade-up" data-aos-delay="100">Salute the Frontline Warriors & become one while you stay Quarantined!</h1>
         </div>
       </div>
     </div>
@@ -124,11 +178,9 @@
     <br />
     <center>
       <div class="col-md-8 text-center">
-        <h2 class="mb-4 section-title">About the Pandemic</h2>
-        <p>The COVID‑19 pandemic, also known as the coronavirus pandemic, is an
-          ongoing global pandemic of coronavirus disease 2019 (COVID‑19), caused
-          by severe acute respiratory syndrome coronavirus 2 (SARS‑CoV‑2).The
-          outbreak was first identified in December 2019 in Wuhan, China.</p>
+        <h2 class="mb-4 section-title">No doubt, the Pandemic hit us hard..</h2>
+        <p>The COVID‑19 pandemic is an
+          ongoing global pandemic of coronavirus disease 2019 (COVID‑19), caused by severe acute respiratory syndrome coronavirus 2 (SARS‑CoV‑2).The outbreak has created panic all around the world. People are forced to stay indoors and are asked to follow social distancing, which has also has affected the mental health of many of us. </p>
       </div>
     </center>
     <br /><br /><br />
@@ -139,40 +191,17 @@
 
           <img src="images/cor2.png" alt="Image" class="img-fluid mb-5">
 
-          <h1 class="mb-4 section-title">Why Heroes ?</h1>
+          <h1 class="mb-4 section-title">But our Heroes have been fighting for us!</h1>
           <p>Our heroes don’t wear capes, they wear masks and white coats; our heroes don’t fight monsters, they fight pandemics.</p>
-          <p class="mb-5">The corona-virus pandemic outbreak has created panic
-            all around the world. People are forced to stay indoors and are asked
-            to follow social distancing. As you sit in front of your television
-            screens, cribbing about being forcefully confined to your home
-            because of the pandemic, there are heroes who have been fighting out
-            there, with the brightest smiles on their faces. <br />
-
-            After witnessing these selfless services, every human would agree
-            that our heroes are not those who jump floors on our screens but
-            those who get out of their protective shelters to provide us with
-            vegetables and groceries. Our heroes are not the ones who have
-            superpowers but the ones who without any powers, are out there
-            helping us during the pandemic outbreak. All the doctors, nurses,
-            delivery boys and all other people who are helping us during this
-            time need special applause. <br />
-
-            Even with millions in our accounts, we are incapable of paying for
-            the kind of work they have been doing in this tough time. A salute,
-            a clap, a few words of appreciation might not make much difference
-            to you but it's sure to make a difference in the lives of those
-            providing us essential services. <br />
-            The aim of our initiative is to provide the much needed recognition
-            to our frontline warriors for their work and bring them into <thead>
-            limelight of the society. <br />
-            </thead>
+          <p class="mb-5">
+            As you sit in front of your television screens, cribbing about being forcefully confined to your home because of the pandemic, there are heroes who have been fighting out there, with the brightest smiles on their faces. Our heroes are not the ones who have superpowers but the ones who without any powers, are out there helping us during the pandemic outbreak. All the doctors, nurses, delivery boys and all other people who are helping us during this time need special applause.
           </p>
-          <p><a href="form.html" class="btn btn-outline-black">Learn How To Register</a></p>
+          <!-- <p><a href="form.html" class="btn btn-outline-black">Learn How To Register</a></p> -->
         </div>
         <div class="col-lg-6 order-1">
           <figure class="img-dotted-bg">
             <img src="images/cor1.png" alt="Image" class="img-fluid">
-              <img src="images/cor-3.png" alt="Image" class="img-fluid mb-5">
+              <!-- <img src="images/cor-3.png" alt="Image" class="img-fluid mb-5"> -->
           </figure>
 
         </div>
@@ -183,14 +212,21 @@
   <div class="section">
     <center>
       <div class="col-md-8 text-center">
-        <h2 class="mb-4 section-title" id="heroes">Our Frontline Heroes</h2>
-        <p>Thank you for choosing to stay, when with our ungrateful behaviour
+        <h2 class="mb-4 section-title" id="heroes">Our Frontline Heroes need an applause, don't you think?</h2>
+        <!-- <p>Thank you for choosing to stay, when with our ungrateful behaviour
           we pushed you away; thank you for choosing humanity, even over your
-          health and sanity.</p>
+          health and sanity.
+            
+
+          </p> -->
+
+          <p class="mb-4">Appreciate the heroes by getting them registered</p>
+
+          <p class="mb-0"><a href="./mlh/index.html" class="btn btn-outline-white  px-4 py-3" style="color: black;">Register Here</a></p>
       </div>
     </center>
     <br /><br />
-    <div class="container-fluid" style="background-color: aliceblue;padding-top: 20px;">
+    <div class="container-fluid" style="background-color: #f1e2e2;padding-top: 20px;">
     <div class="container" >
       <div class="row">
         <div class="col-lg-3 mb-4">
@@ -232,9 +268,9 @@
     <div class="container">
       <div class="row mb-5 justify-content-center" data-aos="fade-up">
         <div class="col-md-8 text-center">
-          <h2 class="mb-4 section-title">Who Are They ?</h2>
-          <p>Don’t forget to thank those who in this lockdown made our lives easy,
-            things would have been very different had they not chosen to be busy.</p>
+          <h2 class="mb-4 section-title">WE SALUTE YOU!</h2>
+          <!-- <p>Don’t forget to thank those who in this lockdown made our lives easy,
+            things would have been very different had they not chosen to be busy.</p> -->
         </div>
       </div>
     </div>
@@ -383,24 +419,74 @@
 
 
 
-  <div class=" py-5"id = "form" style="background-color:antiquewhite;">
+  <div class=" py-5" id = "form" style="background-color:antiquewhite;">
     <div class="container text-center">
       <div class="row justify-content-center">
-        <div class="col-lg-7">
-          <h3 class=" mb-2 font-weight-normal">Get Started</h3>
+        <div class="col-lg-9">
+          <!-- <h3 class=" mb-2 font-weight-normal">Get Started</h3>
           <p class="mb-4">Appreciate the heroes by getting them registered</p>
 
-          <p class="mb-0"><a href="./mlh/index.html" class="btn btn-outline-white px-4 py-3" style="color: black;">Register Here</a></p>
+          <p class="mb-0"><a href="./mlh/index.html" class="btn btn-outline-white px-4 py-3" style="color: black;">Register Here</a></p> -->
+
+          <h3>And while you stay Quarantined, with us you can do so much! </h3>
+
+  <div class="container">
+  <div class="row text-center">
+
+    <div class="col-md-4 card-container">
+      <div class="card card-flip">
+        <div class="front card-block">
+          <!-- To add FontAwesome Icons use Unicode characters and to set size use font-size instead of fa-*x because when calculating the height (see js), the size of the icon is not calculated if using classes -->
+
+          <span class="card-img-top fa" style="font-size: 4em">&#xf118;</span>
+          <h4 class="card-title">Bored at home?</h4>
+          <h6 class="card-subtitle text-muted">Front Sub-title</h6>
+          
+        </div>
+        <div class="back card-block">
+          <p>BORED?</p>
+          <a href="#" class="btn btn-outline-primary">Read More</a>
         </div>
       </div>
+    </div>
 
+    <div class="col-md-4 card-container">
+      <div class="card card-flip">
+        <div class="front card-block">
+          <span class="card-img-top fa" style="font-size: 4em">&#xf118;</span>
+          <h4 class="card-title">Looking for help?</h4>
+          <h6 class="card-subtitle text-muted">Front Sub-title</h6>
+          
+        </div>
+        <div class="back card-block">
+          <p>Some example short text</p>
+          <a href="#" class="btn btn-outline-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 card-container">
+      <div class="card card-flip">
+        <div class="front card-block">
+          <span class="card-img-top fa" style="font-size: 4em">&#xf118;</span>
+          <h4 class="card-title">Up for an event?</h4>
+          <h6 class="card-subtitle text-muted">Front Sub-title</h6>
+          
+        </div>
+        <div class="back card-block">
+          <p>Some example text</p>
+          <a href="#" class="btn btn-outline-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+
+        </div>
+      </div>
     </div>
   </div>
 
-
-<!-- login modal -->
-
-<!-- Button trigger modal -->
+    </div>
+  </div>
 
 
 
@@ -499,16 +585,37 @@
   <script>
   AOS.init();
 </script>
+<script type="text/javascript">
+  $(document).ready(function() {
+  var front = document.getElementsByClassName("front");
+  var back = document.getElementsByClassName("back");
+
+  var highest = 0;
+  var absoluteSide = "";
+
+  for (var i = 0; i < front.length; i++) {
+    if (front[i].offsetHeight > back[i].offsetHeight) {
+      if (front[i].offsetHeight > highest) {
+        highest = front[i].offsetHeight;
+        absoluteSide = ".front";
+      }
+    } else if (back[i].offsetHeight > highest) {
+      highest = back[i].offsetHeight;
+      absoluteSide = ".back";
+    }
+  }
+  $(".front").css("height", highest);
+  $(".back").css("height", highest);
+  $(absoluteSide).css("position", "absolute");
+});
+</script>
 <script src="./index.js"></script>
 <script >
   firebase.auth().onAuthStateChanged(function(user){
   if(user)
   {
     var user = firebase.auth().currentUser;
-    
-
-   
-    console.log(user.email);
+     console.log(user.email);
     document.querySelector('#log').style.display='none';
      document.querySelector('#btn-logout').style.display='block';
   }
