@@ -22,6 +22,40 @@
     <!-- Vendor CSS-->
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+     <style type="text/css"> /*nav css*/
+
+        .nav-link{
+    opacity: 0.75;
+    /*padding-bottom: 50px;*/
+  margin: 0px 7px;
+  display: inline-block;
+  position: relative;
+
+  }
+         
+  .nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  background-color: gold;
+}
+
+.nav-link-fade-up::before {
+  width: 100%;
+  bottom: 8px;
+  opacity: 0;
+}
+
+.nav-link-fade-up:hover::before {
+  bottom: 10px;
+  opacity: 1;
+}
+       </style>
 
     <!-- Main CSS-->
     <link href="css/main.css" rel="stylesheet" media="all">
@@ -80,7 +114,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="../products.html">Book Recommendations</a>
           <a class="dropdown-item" href="https://www.codeheroku.com/static/movies/index.html">Movie Recommendations</a>
-          <a class="dropdown-item" href="./Games.html">Games</a>
+          <a class="dropdown-item" href="../Games.html">Games</a>
           <a class="dropdown-item" href="../blog/blog.html">Blog</a>
           <a class="dropdown-item" href="../blog/compose.html">Compose Blog</a>
           

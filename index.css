@@ -4400,7 +4400,22 @@ background-image: linear-gradient(-90deg, #E1BEE7, white);
     margin-bottom: 0;
     list-style: none
   }
-  
+
+  /*.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  background-color: gold;
+}
+ .nav-link-fade-up:hover::before {
+  height: 3px;
+} */
+ /* 
   .nav-link {
     display: block;
     padding: 0.5rem 1rem
@@ -4477,7 +4492,7 @@ background-image: linear-gradient(-90deg, #E1BEE7, white);
     -ms-flex-positive: 1;
     flex-grow: 1;
     text-align: center
-  }
+  }*/
   
   .tab-content>.tab-pane {
     display: none

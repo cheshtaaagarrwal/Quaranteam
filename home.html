@@ -17,6 +17,8 @@
        <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"/>
         -->
        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
        <style type="text/css">
         
          .card-block .btn-outline-primary {
@@ -67,6 +69,41 @@
 
 .card-container:hover .card-flip {
   transform: rotateY(180deg);
+}
+       </style>
+
+       <style type="text/css"> /*nav css*/
+
+        .nav-link{
+    opacity: 0.75;
+    /*padding-bottom: 50px;*/
+  margin: 0px 7px;
+  display: inline-block;
+  position: relative;
+
+  }
+         
+  .nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  background-color: gold;
+}
+
+.nav-link-fade-up::before {
+  width: 100%;
+  bottom: 8px;
+  opacity: 0;
+}
+
+.nav-link-fade-up:hover::before {
+  bottom: 10px;
+  opacity: 1;
 }
        </style>
 
@@ -434,8 +471,8 @@
 
           <p style="font-size: 18px;">.During the COVID-19 pandemic, one may experience stress, anxiety, fear, sadness and loneliness.It is only natural that it can take a toll on our mental health. Due to the lockdown children,elderly and the nursery homes across the globe are facing isolation and depression problems , resulting in many more cases of loneliness and anxiety. The best way is being engaged in an activity which keeps you happy! So we have for you so many options at one single place to ensure that you're able to manage isolation well! </p>
 
-  <div class="container">
-  <div class="row text-center">
+  <div class="container  ">
+  <div class="row text-center ">
 
     <div class="col-md-3 card-container">
       <div class="card card-flip">
@@ -450,7 +487,7 @@
         <div class="back card-block">
           <p>We have tons of books to chose from, which could give you a joyful reading experience online!
           Happy reading folks!</p>
-          <a href="#" class="btn btn-outline-primary">Take me there</a>
+          <a href="./products.html" class="btn btn-outline-primary">Take me there</a>
         </div>
       </div>
     </div>
@@ -467,7 +504,7 @@
         </div>
         <div class="back card-block">
           <p>Miss going to the theatre? Fret not. We have your own personal movie reccomendation system. Look for your favourite movies and get ready to binge!! </p>
-          <a href="#" class="btn btn-outline-primary">Take me there</a>
+          <a href="https://www.codeheroku.com/static/movies/index.html" class="btn btn-outline-primary">Take me there</a>
         </div>
       </div>
     </div>
@@ -481,7 +518,7 @@
         </div>
         <div class="back card-block">
           <p>What's the big deal if you can't play outdoors? We have for you addictive and fun filled games, which one can play alone and also with a partner!! </p>
-          <a href="#" class="btn btn-outline-primary">Take me there</a>
+          <a href="./Game/Games.html" class="btn btn-outline-primary">Take me there</a>
         </div>
       </div>
     </div>
@@ -496,7 +533,7 @@
         </div>
         <div class="back card-block">
           <p>Vent out your feelings through expressive blogs! Publish your blog, read other blogs and explore the writer inside you! </p>
-          <a href="#" class="btn btn-outline-primary">Take me there</a>
+          <a href="./blog/compose.html" class="btn btn-outline-primary">Take me there</a>
         </div>
       </div>
     </div>
@@ -509,7 +546,7 @@
   <br>
   <br>
 
-  <div class="row justify-content-center" style="margin-top: 4em;">
+  <div class="row justify-content-center" style="margin-top: 4em; ">
         <div class="col-lg-9">
           <!-- <h3 class=" mb-2 font-weight-normal">Get Started</h3>
           <p class="mb-4">Appreciate the heroes by getting them registered</p>
@@ -520,8 +557,10 @@
 
           <p style="font-size: 18px;"> Don't you want to become a hero yourself, by helping someone in need during the pandemic? Or maybe if you yourself have an urgent need to be catered, then this is the place for you! We connect the needy with the provider. Unemployement is at it peek, food accessibilty and supply , unavailability of PPE kits for the doctors are just a few examples of suffering. We have a platform where you can register any help that you require and recieve the necessary help.Any person,NGO or organisation can provide any help or service according to requirements posted.  </p>
 
-  <div class="container">
-  <div class="row text-center">
+  <div class="container"> 
+  <div class="row text-center" style="
+  justify-content: center;
+  ">
 
     <div class="col-md-4 card-container">
       <div class="card card-flip">
@@ -529,12 +568,13 @@
          
           <span class="card-img-top fa" style="font-size: 4em"><img src="./images/help.jpg" style="height:260px; " class="card-img-top" alt="..."></span>
           <h4 class="card-title card-img-overlay"> Looking for help?</h4>
+
           
           
         </div>
         <div class="back card-block">
-          <p>BORED?</p>
-          <a href="#" class="btn btn-outline-primary">Read More</a>
+          <p>Here you can register any kind of need, requirement, urgent help you want, and your need will be visible so that those who can help may contact you asap</p>
+          <a href="#" class="btn btn-outline-primary">Take me there</a>
         </div>
       </div>
     </div>
@@ -547,8 +587,8 @@
           
         </div>
         <div class="back card-block">
-          <p>Some example short text</p>
-          <a href="#" class="btn btn-outline-primary">Read More</a>
+          <p>Be someone's saviour today, volunteer to help those who are in need during the pandemic and become a real hero! </p>
+          <a href="#" class="btn btn-outline-primary">Take me there</a>
         </div>
       </div>
     </div>
@@ -570,7 +610,7 @@
 
           <h3><b>Community Building</b></h3>
 
-          <p style="font-size: 18px;">Since isolation and depression is increasing at a rapid rate we bring up a solution to promote community building for all. We encourage NGO's, organisations and every person who feels lonely to collaborate by updating one with the all the virtual events that one can attend at the comfort of ones place.Any event to be organised and its details can be posted on this platform so that we learn, help and grow together! </p>
+          <p style="font-size: 18px;">Since isolation and depression is increasing at a rapid rate we bring up a solution to promote community building for all. We encourage NGO's, organisations and every person who feels lonely to collaborate by updating one with the all the virtual events that one can attend at the comfort of ones place.Any event to be organised and its details can be posted on this platform so that we learn, help and get through this together! </p>
 
   <div class="container">
   <div class="row text-center">
@@ -585,8 +625,8 @@
           
         </div>
         <div class="back card-block">
-          <p>Some example text</p>
-          <a href="#" class="btn btn-outline-primary">Read More</a>
+          <p>Head straight to our events section and kill the bordeom while you learn something new in online webinars and workshops!</p>
+          <a href="./events/eventDisplay.html" class="btn btn-outline-primary">Take me there</a>
         </div>
       </div>
     </div>

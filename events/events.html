@@ -23,6 +23,40 @@
          }
  
        </style>
+        <style type="text/css"> /*nav css*/
+
+        .nav-link{
+    opacity: 0.75;
+    /*padding-bottom: 50px;*/
+  margin: 0px 7px;
+  display: inline-block;
+  position: relative;
+
+  }
+         
+  .nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  background-color: gold;
+}
+
+.nav-link-fade-up::before {
+  width: 100%;
+  bottom: 8px;
+  opacity: 0;
+}
+
+.nav-link-fade-up:hover::before {
+  bottom: 10px;
+  opacity: 1;
+}
+       </style>
       <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
